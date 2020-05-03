@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class ShellStateApplication
 
 fun main(args: Array<String>) {
-	runApplication<ShellStateApplication>(*args)
+    runApplication<ShellStateApplication>(*args)
 }
