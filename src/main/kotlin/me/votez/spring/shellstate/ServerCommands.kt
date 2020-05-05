@@ -8,9 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.messaging.MessageHeaders
 import org.springframework.messaging.support.MessageBuilder
+import org.springframework.shell.Availability
 import org.springframework.shell.jline.PromptProvider
 import org.springframework.shell.standard.ShellComponent
 import org.springframework.shell.standard.ShellMethod
+import org.springframework.shell.standard.ShellMethodAvailability
 import org.springframework.shell.standard.ShellOption
 import org.springframework.statemachine.StateMachine
 import java.util.*
@@ -63,12 +65,11 @@ class ServerCommands : PromptProvider {
                 }
             }
 
-/*
+
     @ShellMethodAvailability("list")
     fun listAvailable() =
             if (stateMachine.state.id == State.READY) Availability.available()
             else Availability.unavailable("requires authentication performed first")
-*/
 }
 
 enum class EntityType {
